@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- START: Custom Prose Overflow Handling --- */
+
+/* Apply basic word breaking to the main container */
+.prose {
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Alias for overflow-wrap */
+    word-break: break-word; /* Allow breaking words if needed */
+}
+
+/* Force preformatted text (code blocks) to wrap and scroll horizontally if needed */
+.prose pre {
+    white-space: pre-wrap !important;  /* Wrap lines */
+    word-wrap: break-word !important;   /* Break long words/strings */
+    overflow-wrap: break-word !important; /* Ensure breaking */
+    overflow-x: auto !important;     /* Add horizontal scrollbar *only* to the block if needed */
+    max-width: 100%;                 /* Prevent block exceeding container */
+}
+
+/* Handle inline code separately, less aggressive breaking */
+.prose code:not(pre > code) {
+    word-break: break-all; /* Break anywhere if needed for inline */
+}
+
+/* Ensure tables are contained */
+.prose table {
+    display: block;    /* Necessary for max-width and overflow */
+    max-width: 100%;   /* Prevent table exceeding container */
+    overflow-x: auto;  /* Add horizontal scrollbar *to the table* if needed */
+    white-space: nowrap; /* Keep table content on one line initially, rely on scroll */
+}
+.prose table th,
+.prose table td {
+    white-space: normal; /* Allow content within cells to wrap */
+}
+
+
+/* Ensure images/videos/iframes fit */
+.prose img,
+.prose video,
+.prose iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- END: Custom Prose Overflow Handling --- */
