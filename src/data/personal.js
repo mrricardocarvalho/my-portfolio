@@ -5,6 +5,8 @@ const personalData = {
     location: "PT",
     profilePictureUrl: "assets/profile.png", // Removed leading slash
     email: "ricardo.sampaio@gmail.com",
+    linkedinUrl: "https://www.linkedin.com/in/ricardo-carvalho-05741519/", // Optional
+    githubUrl: "https://github.com/mrricardocarvalho?tab=repositories/", // Optional
     cvUrl: "assets/your-cv.pdf" // Removed leading slash
   },
   aboutMe: `Experienced Dynamics 365 Business Central Developer with over 15 years of success delivering high-impact ERP solutions across the EMEA region. Expert in custom development, complex integrations (API/XML/JSON), performance optimization, and advanced technical support. Known for leading development initiatives, resolving complex technical challenges, and driving successful project outcomes that exceed client expectations.`,
