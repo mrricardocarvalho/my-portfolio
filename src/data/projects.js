@@ -2,7 +2,7 @@ const projectsData = {
   projects: [
     {
       id: 'proj-1',
-      iconUrl: "/assets/project-icons/portfolio.svg", // CHANGE ICON FILENAME HERE AND IN FOLDER
+      iconUrl: "assets/project-icons/portfolio.svg", // Removed leading slash
       title: "Professional Portfolio",
       category: "Web Development", // Adjusted category
       role: "Developer", // Adjusted role

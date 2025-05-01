@@ -2,7 +2,7 @@ const resumeData = {
   experience: [
     {
       id: 1,
-      logoUrl: "/assets/company-logos/microsoft-logo.png", // Ensure exists in public/assets/company-logos/
+      logoUrl: "assets/company-logos/microsoft-logo.png", // Removed leading slash
       company: "Microsoft",
       location: "Sysmatch (Contractor at Microsoft)",
       title: "Dynamics Business Central Support Engineer EMEA",
@@ -13,7 +13,7 @@ const resumeData = {
     },
     {
       id: 2,
-      logoUrl: "/assets/company-logos/sysmatchpt.png", // Ensure exists in public/assets/company-logos/
+      logoUrl: "assets/company-logos/sysmatchpt.png", // Ensure exists in public/assets/company-logos/
       company: "Sysmatch",
       location: "Lisbon, PT",
       title: "Senior Dynamics NAV Developer",
@@ -24,7 +24,7 @@ const resumeData = {
     },
     {
       id: 3,
-      logoUrl: "/assets/company-logos/novabase.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
+      logoUrl: "assets/company-logos/novabase.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
       company: "Novabase",
       location: "Lisbon, PT",
       title: "IT Consultant (Dynamics AX)",
@@ -35,7 +35,7 @@ const resumeData = {
     },
     {
       id: 4,
-      logoUrl: "/assets/company-logos/aboutnav.png", // Ensure exists in public/assets/company-logos/
+      logoUrl: "assets/company-logos/aboutnav.png", // Ensure exists in public/assets/company-logos/
       company: "AboutNav",
       location: "Lisbon, PT",
       title: "Senior Dynamics NAV Developer",
@@ -50,7 +50,7 @@ const resumeData = {
      // Recommend adding most relevant / highest degree first if applicable
      {
       id: 6, // Changed ID to keep it unique
-      logoUrl: "/assets/company-logos/isg.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
+      logoUrl: "assets/company-logos/isg.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
       institution: "Instituto Superior de Gestão",
       location: "Lisboa, PT",
       degree: "Licenciatura in Management Informatics",
@@ -60,7 +60,7 @@ const resumeData = {
     },
     {
       id: 1,
-      logoUrl: "/assets/company-logos/formabase.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
+      logoUrl: "assets/company-logos/formabase.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
       institution: "Formabase",
       location: "Lisbon, PT",
       degree: "Training: JavaScript",
@@ -70,7 +70,7 @@ const resumeData = {
     },
     {
       id: 2,
-      logoUrl: "/assets/company-logos/rumos.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
+      logoUrl: "assets/company-logos/rumos.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
       institution: "Rumos",
       location: "Lisbon, PT",
       degree: "Training: Developing ASP.NET MVC 4 Web Apps",
@@ -80,7 +80,7 @@ const resumeData = {
     },
     {
       id: 3,
-      logoUrl: "/assets/company-logos/galileu.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
+      logoUrl: "assets/company-logos/galileu.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
       institution: "Galileu",
       location: "Lisboa, PT",
       degree: "Training: Microsoft Visual Studio 2010 ASP.NET",
@@ -90,7 +90,7 @@ const resumeData = {
     },
     {
       id: 4,
-      logoUrl: "/assets/company-logos/galileu.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER (can reuse)
+      logoUrl: "assets/company-logos/galileu.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER (can reuse)
       institution: "Galileu",
       location: "Lisboa, PT",
       degree: "Microsoft Dynamics NAV 2009 Installation & Configuration", // Shortened
@@ -100,7 +100,7 @@ const resumeData = {
     },
     {
       id: 5,
-      logoUrl: "/assets/company-logos/conhecermais.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
+      logoUrl: "assets/company-logos/conhecermais.png", // CHANGE LOGO FILENAME HERE AND IN FOLDER
       institution: "Conhecer Mais TI RH e IEFP",
       location: "Lisboa, PT",
       degree: "Certified Technical Trainer (CCP)",

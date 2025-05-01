@@ -5,10 +5,10 @@ const professionalData = {
     name: "Ricardo Carvalho", // Replace with Your Name
     title: "Senior D365 BC Developer", // Replace with Your Title
     location: "PT", // Replace with Your Base Location
-    profilePictureUrl: "/assets/profile.png", // Placeholder path - Create /public/assets/profile.jpg later
+    profilePictureUrl: "assets/profile.png", // Removed leading slash
     email: "ricardo.sampaio@gmail.com", // Replace with Your Email
     // Optional: Add portfolioUrl, linkedInUrl, githubUrl etc.
-    cvUrl: "/assets/your-cv.pdf" // Placeholder path - Create /public/assets/your-cv.pdf later
+    cvUrl: "assets/your-cv.pdf" // Removed leading slash
   },
   aboutMe: `Experienced Dynamics 365 Business Central Developer with over 15 years of success delivering high-impact ERP solutions across the EMEA region. Expert in custom development, complex integrations (API/XML/JSON), performance optimization, and advanced technical support. Known for leading development initiatives, resolving complex technical challenges, and driving successful project outcomes that exceed client expectations.`, // Replace with Your About Me text
   skills: ["JavaScript", "React", "Node.js", "ExpressJS", "Python", "SQL", "Git", "Agile", "CI/CD"], // Replace with Your Skills
