@@ -18,24 +18,24 @@ function BlogSection() {
   };
 
   return (
-    <section className="mt-8">
-       <div className={sectionCardClasses}>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-0 flex items-center p-6 border-b border-gray-200">
-             <span className="w-2.5 h-2.5 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span>
-             Blog
-          </h2>
-
-          {/* Attach ref and click listener to the list container */}
-          <div ref={blogListRef} onClick={handleListClick}>
-             {posts && posts.length > 0 ? (
-               posts.map((post) => (
-                 <BlogPostCard key={post.id} post={post} />
-               ))
-             ) : (
-               <p className="p-6 text-gray-500">No blog posts available yet.</p>
-             )}
-          </div>
-       </div>
+    <section className="mt-8" aria-label="Blog posts">
+      <div className={sectionCardClasses}>
+        <h2 className="text-2xl font-semibold text-blue-600 mb-0 flex items-center p-6 border-b border-gray-200">
+          <span className="w-2.5 h-2.5 bg-blue-600 rounded-full mr-3 flex-shrink-0"></span>
+          Blog
+        </h2>
+        <div ref={blogListRef} onClick={handleListClick}>
+          {posts && posts.length > 0 ? (
+            posts.map((post) => (
+              <article key={post.id} aria-labelledby={`blog-title-${post.id}`}>
+                <BlogPostCard post={post} />
+              </article>
+            ))
+          ) : (
+            <p className="p-6 text-gray-500">No blog posts available yet.</p>
+          )}
+        </div>
+      </div>
     </section>
   );
 }

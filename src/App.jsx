@@ -38,25 +38,30 @@ function App() {
 
 
   return (
-    <div className="flex bg-gray-100 p-4 md:p-6">
-      <ScrollToTop /> {/* Ensure ScrollToTop is rendered */}
+    <div className="flex bg-gray-100 p-4 md:p-6 min-h-screen">
       <Sidebar
         personalInfo={personalData.personalInfo}
         aboutMe={personalData.aboutMe}
         skills={personalData.skills}
         information={personalData.information}
       />
-      <main className="flex-grow p-8 ml-6">
-        <div className="sticky top-0 z-20 bg-white pt-2 pb-2 px-4 shadow mb-8 rounded-lg">
-           <TabNavigation activeTab={displayTab} setActiveTab={handleTabChange} />
-        </div>
-
-        <Routes>
-          <Route path="/" element={<PortfolioView activeTab={activeTab} />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          {/* <Route path="*" element={<div>404</div>} /> */}
-        </Routes>
-      </main>
+      <div className="flex flex-col flex-grow ml-6">
+        <header className="sr-only">
+          <h1>mrricardocarvalho Professional Portfolio and Blog</h1>
+        </header>
+        <nav aria-label="Main navigation" className="sticky top-0 z-20 bg-white pt-2 pb-2 px-4 shadow mb-8 rounded-lg">
+          <TabNavigation activeTab={displayTab} setActiveTab={handleTabChange} />
+        </nav>
+        <main className="flex-grow p-0">
+          <Routes>
+            <Route path="/" element={<PortfolioView activeTab={activeTab} />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+          </Routes>
+        </main>
+        <footer className="mt-8 text-center text-xs text-gray-500" aria-label="Footer">
+          &copy; {new Date().getFullYear()} mrricardocarvalho. All rights reserved.
+        </footer>
+      </div>
     </div>
   );
 }

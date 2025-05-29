@@ -9,7 +9,7 @@ function ProjectsSection() {
   const projects = projectsData.projects; // Get projects from imported data
 
   return (
-    <section className="mt-8">
+    <section className="mt-8" aria-label="Projects">
        {/* Main container card */}
        <div className={sectionCardClasses}>
           {/* Title inside the card */}
@@ -22,7 +22,9 @@ function ProjectsSection() {
           <div>
              {projects && projects.length > 0 ? (
                projects.map((project) => (
-                 <ProjectCard key={project.id} project={project} />
+                 <article key={project.id} aria-labelledby={`project-title-${project.id}`}>
+                   <ProjectCard project={project} />
+                 </article>
                ))
              ) : (
                <p className="p-6 text-gray-500">No projects listed yet.</p>
