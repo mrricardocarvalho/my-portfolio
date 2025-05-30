@@ -1,0 +1,22 @@
+---
+export async function getStaticPaths() {
+  const postModules = import.meta.glob('./src/blog-posts/*.md', { eager: true });
+  return Object.keys(postModules).map(file => ({
+    params: { slug: file.split('/').pop().replace('.md', '') },
+  }));
+}
+const postModules = import.meta.glob('./src/blog-posts/*.md', { eager: true });
+const { slug } = Astro.params;
+const postMod = Object.entries(postModules).find(([file]) => file.split('/').pop().replace('.md', '') === slug)?.[1];
+---
+{postMod ? (
+  <article class="prose mx-auto my-8">
+    <h1>{postMod.frontmatter?.title ?? slug.replace(/-/g, ' ')}</h1>
+    <postMod.Content />
+  </article>
+) : (
+  <article class="prose mx-auto my-8">
+    <h1>Post not found</h1>
+    <p>The requested blog post could not be found.</p>
+  </article>
+)}

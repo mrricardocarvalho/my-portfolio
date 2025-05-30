@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'; // Import useRef
-import BlogPostCard from './BlogPostCard';
+// import BlogPostCard from './BlogPostCard';
 import blogMetaData from '../data/blogMeta';
 
 const sectionCardClasses = "bg-white rounded-lg shadow";
@@ -26,11 +26,14 @@ function BlogSection() {
         </h2>
         <div ref={blogListRef} onClick={handleListClick}>
           {posts && posts.length > 0 ? (
-            posts.map((post) => (
-              <article key={post.id} aria-labelledby={`blog-title-${post.id}`}>
-                <BlogPostCard post={post} />
-              </article>
-            ))
+            <ul>
+              {posts.map((post) => (
+                <li key={post.id} aria-labelledby={`blog-title-${post.id}`}>
+                  {/* <BlogPostCard post={post} /> */}
+                  {post.title} {/* Fallback to just displaying the post title */}
+                </li>
+              ))}
+            </ul>
           ) : (
             <p className="p-6 text-gray-500">No blog posts available yet.</p>
           )}
